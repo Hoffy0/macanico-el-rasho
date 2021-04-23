@@ -12,7 +12,6 @@ _Para este proyecto es necesario:_
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Maximiliano Cortes** - *Lider de grupo* - [Hoffy0](https://github.com/Hoffy0)
 * **Renzo Romanini** - [BlazeItFOX](https://github.com/BlazeItFOX)
