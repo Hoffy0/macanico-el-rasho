@@ -59,3 +59,18 @@ body{
 }
 
 /*###############*/
+
+/**** Weather ****/
+.weather{
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(156, 155, 155);
+    border-radius: 50%;
+}
+
+img.iconWeather{
+    width: 30%;
+    height: 30%;
+}
+/*##############*/
