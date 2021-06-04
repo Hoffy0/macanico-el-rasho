@@ -2,6 +2,20 @@ body{
     background-color: white;
 }
 
+.formCars{
+    margin-top: 10%;
+    background-color:#212529;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.table{
+    margin-top: 5%;
+}
+
 /* Styles Slider */
 .container-slider{
     width: 90%;

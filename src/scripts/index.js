@@ -1,6 +1,6 @@
 //##### Slider #####
 if(document.getElementsByClassName("slider").length > 0){
-    console.log("hay un slider")
+    //console.log("hay un slider")
     const slider = document.querySelector("#slider");
     var sliderSection = document.querySelectorAll(".slider-section");
     var sliderSectionLast = sliderSection[sliderSection.length - 1]
@@ -51,7 +51,7 @@ if(document.getElementsByClassName("slider").length > 0){
     }, 4000);
 
     }else{
-        console.log("no hay un slider")
+        //console.log("no hay un slider")
 
     }
 
