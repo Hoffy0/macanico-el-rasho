@@ -1,0 +1,5 @@
+*.pyc
+core/migrations
+core/__pycache__
+mecanicoElRasho/__pycache__
+db.cnf
