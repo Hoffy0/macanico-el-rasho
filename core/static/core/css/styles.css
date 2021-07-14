@@ -77,10 +77,14 @@ body{
 /**** Weather ****/
 .weather{
     justify-content: center;
-    width: 30%;
-    height: 100%;
-    background-color: rgb(156, 155, 155);
-    border-radius: 50%;
+    width: 10%;
+    height: 20%;
+    background-color: rgb(162, 193, 202);
+    border-radius: 0%;
+    font-family: 'Noto Sans', sans-serif;
+    color:rgb(0, 0, 0);
+    margin-left: 10px;
+    
 }
 
 img.iconWeather{
@@ -88,3 +92,9 @@ img.iconWeather{
     height: 30%;
 }
 /*##############*/
+
+#usuario {
+    font-weight: 100;
+    text-decoration: none;
+    color: red;
+}
