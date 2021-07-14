@@ -1,0 +1,15 @@
+{% extends 'dashboard/index.html' %}
+
+{% block content %}
+    <a href="{% url 'home' %}">Volver</a>
+    <hr>
+    <h1>Reparacion: {{reparacion.patente}}</h1>
+    <h2>Mecanico Responsable: {{reparacion.mecResponsable}}</h2>
+    <hr>
+    <h2>Auto</h2>
+    <p>Marca: {{reparacion.marca}}</p>
+    <p>Modelo: {{reparacion.modelo}}</p>
+    <hr>
+    <h2>LOG:</h2>
+    <input class="form-control" type="text" value="{{reparacion.log}}" aria-label="readonly input example" readonly>
+{% endblock content %}
