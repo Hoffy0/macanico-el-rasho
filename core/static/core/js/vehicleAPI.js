@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     function mostrar(){
         if(MAKE_ID == 0 || MAKE_ID == null || MAKE_ID == undefined || MAKE_ID == ""){
-            alert("Status: 404");
+            alert("No se ha seleccionado una marca.");
 
         }else{
             $('#carsTable tbody').empty();
