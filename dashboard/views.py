@@ -6,11 +6,12 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Reparaciones
+from core.models import Slider
 
 from django.urls import reverse_lazy
 
 
-##################################################################################
+##################################################################################################
 class Login(LoginView):
     template_name = "dashboard/login.html"
     fields = '__all__'
@@ -19,9 +20,11 @@ class Login(LoginView):
     def get_success_url(self):
         return reverse_lazy('home')
 
+##################################### CRUD REPARACIONES ############################################
 class DashBoardList(LoginRequiredMixin, ListView):
     model = Reparaciones
     context_object_name = "reparaciones"
+    template_name = "dashboard/CRUD-Reparaciones/reparaciones_list.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['count'] = context['reparaciones'].filter(Completa=False).count()
@@ -30,13 +33,14 @@ class DashBoardList(LoginRequiredMixin, ListView):
 class DashBoardDetail(LoginRequiredMixin, DetailView):
     model = Reparaciones
     context_object_name = "reparacion"
-    template_name = "dashboard/reparacion.html"
+    template_name = "dashboard/CRUD-Reparaciones/reparacion.html"
+
 
 class DashBoardCreate(LoginRequiredMixin, CreateView):
     model = Reparaciones
     fields = "__all__"
     success_url = reverse_lazy('home')
-    template_name = "dashboard/reparaciones_form.html"
+    template_name = "dashboard/CRUD-Reparaciones/reparaciones_form.html"
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -46,8 +50,23 @@ class DashBoardUpdate(LoginRequiredMixin, UpdateView):
     model = Reparaciones
     fields = "__all__"
     success_url = reverse_lazy("home")
+    template_name = "dashboard/CRUD-Reparaciones/reparaciones_form.html"
 
 class DashBoardDelete(LoginRequiredMixin, DeleteView):
     model = Reparaciones
     context_object_name = "reparacion"
     success_url = reverse_lazy('home')
+    template_name = "dashboard/CRUD-Reparaciones/reparaciones_confirm_delete.html"
+
+
+
+
+##################################### CRUD SLIDER ############################################
+class SliderList():
+    model = Reparaciones
+    context_object_name = "reparaciones"
+    template_name = "dashboard/CRUD-Reparaciones/reparaciones_list.html"
+
+
+
+

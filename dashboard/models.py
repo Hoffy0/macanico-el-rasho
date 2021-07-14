@@ -12,7 +12,7 @@ class Categoria(models.Model):
 class Marca(models.Model):
     idMarca     = models.AutoField(primary_key=True, verbose_name="ID Marca")
     nombre      = models.CharField(max_length=100,verbose_name="Nombre de la marca")
-    logo        = models.CharField(max_length=500, verbose_name="Logo de la marca")
+    logo        = models.ImageField(upload_to='dashboard/static/dashboard/img/logos')
 
     def __str__(self):
         return self.nombre

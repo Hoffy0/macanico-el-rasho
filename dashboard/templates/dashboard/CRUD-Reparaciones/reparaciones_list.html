@@ -20,12 +20,12 @@
                 <div class="task-title">
                     <div class="task-complete-icon"></div>
                     <i><s><a href=""> {{reparacion}} </a></s></i>
-                </div>
+                    </div>
             {% else %}
-                <div class="task-title">
-                    <div class="task-incomplete-icon"></div>
-                    <a href="{% url 'reparacion' reparacion.idReparacion%}"> {{reparacion}} </a>
-                </div>
+                    <div class="task-title">
+                        <div class="task-incomplete-icon"></div>
+                        <a href="{% url 'reparacion' reparacion.idReparacion%}"> {{reparacion}} </a>
+                    </div>
             {% endif %}
             <div>
                 <a class="update-link" href="{% url 'update' reparacion.idReparacion %}"> <i class="fas fa-edit"></i> </a>

@@ -21,3 +21,8 @@ class Vehiculo(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     def __str__(self):
         return self.patente
+
+class Slider(models.Model):
+    idSlider = models.AutoField(primary_key=True,verbose_name="Id de Categoria")
+    titulo = models.CharField(max_length=20, verbose_name="titulo slider")
+    img = models.ImageField(upload_to='core/static/core/img/slider')
