@@ -1,7 +1,7 @@
 {% extends 'dashboard/index.html' %}
 
 {% block content %}
-    <a href="{% url 'home' %}">Volver</a>
+    <a href="{% url 'home' %}" class="back-link"> <i class="fas fa-long-arrow-alt-left"></i> Volver</a>
     <hr>
     <h1>Reparacion: {{reparacion.patente}}</h1>
     <h2>Mecanico Responsable: {{reparacion.mecResponsable}}</h2>
