@@ -62,11 +62,35 @@ class DashBoardDelete(LoginRequiredMixin, DeleteView):
 
 
 ##################################### CRUD SLIDER ############################################
-class SliderList():
-    model = Reparaciones
-    context_object_name = "reparaciones"
-    template_name = "dashboard/CRUD-Reparaciones/reparaciones_list.html"
+class SliderList(LoginRequiredMixin, ListView):
+    model = Slider
+    context_object_name = "sliders"
+    template_name = "dashboard/CRUD-Slider/slider_list.html"
 
+class SliderDetail(LoginRequiredMixin, DetailView):
+    model = Slider
+    context_object_name = "slider"
+    template_name = "dashboard/CRUD-Slider/slider.html"
 
+class SliderCreate(LoginRequiredMixin, CreateView):
+    model = Slider
+    fields = "__all__"
+    success_url = reverse_lazy('Sliders')
+    template_name = "dashboard/CRUD-Slider/slider_form.html"
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(SliderCreate, self).form_valid(form)
+
+class SliderUpdate(LoginRequiredMixin, UpdateView):
+    model = Slider
+    fields = "__all__"
+    success_url = reverse_lazy("home")
+    template_name = "dashboard/CRUD-Slider/slider_form.html"
+
+class SliderDelete(LoginRequiredMixin, DeleteView):
+    model = Slider
+    context_object_name = "slider"
+    success_url = reverse_lazy('Sliders')
+    template_name = "dashboard/CRUD-Slider/slider_confirm_delete.html"
 

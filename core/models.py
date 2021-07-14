@@ -25,4 +25,6 @@ class Vehiculo(models.Model):
 class Slider(models.Model):
     idSlider = models.AutoField(primary_key=True,verbose_name="Id de Categoria")
     titulo = models.CharField(max_length=20, verbose_name="titulo slider")
-    img = models.ImageField(upload_to='core/static/core/img/slider')
+    img = models.ImageField(upload_to= 'core/static/core/img/slider')
+    def __str__(self):
+        return self.titulo

@@ -1,6 +1,20 @@
-{% extends 'dashboard/index.htmls' %}
+{% extends 'dashboard/index.html' %}
 
 {% block content %}
-    
-
+    <div>
+        <a href="{% url 'Sliders' %}" class="back-link"> <i class="fas fa-long-arrow-alt-left"></i> Volver</a>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                {% if 'update' in request.get_full_path %}
+                    <input class="button" type="submit" value="Actualizar">
+                {% else %}
+                    <input class="button" type="submit" value="Crear">
+                {% endif %}
+            </form>
+        </div>
+    </div>
 {% endblock content %}
