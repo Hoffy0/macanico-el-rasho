@@ -1,0 +1,12 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+{% block content %}
+    <a href="{% url 'Sliders' %}" class="back-link"> <i class="fas fa-long-arrow-alt-left"></i> Volver</a>
+    <hr>
+    <h1>Slider: {{slider.titulo}}</h1>
+    <hr>
+    <p id="imgURL" hidden>{{slider.img}}</p>
+    <img src="{% static 'core/img/slider/red-color-lighting-particle-view-of-modern-luxury-white-car-_m3Y4Ag6.jpg'%}" alt="" id="imgSlider">
+    
+
+{% endblock content %}
